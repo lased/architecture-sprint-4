@@ -13,3 +13,7 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ["node-app:81"]
+  - job_name: "jaeger-all-in-one"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["jaeger-all-in-one:14269"]

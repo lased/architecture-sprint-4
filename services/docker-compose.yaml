@@ -34,6 +34,14 @@ services:
     networks:
       - monitoring
 
+  jaeger-all-in-one:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - 4318:4318
+      - 16686:16686
+    networks:
+      - monitoring
+
 networks:
   monitoring:
     driver: bridge
