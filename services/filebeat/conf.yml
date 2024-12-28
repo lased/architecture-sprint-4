@@ -1,0 +1,13 @@
+filebeat.inputs:
+- type: container
+  paths: 
+    - /var/lib/docker/containers/*/*.log
+
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      hints.enabled: true
+
+output.logstash:
+  hosts: ["logstash:5044"]
+  ssl.enabled: false
